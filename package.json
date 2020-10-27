@@ -1,16 +1,15 @@
 {
-  "name": "logger-utils",
+  "name": "@element-gaming/logger-utils",
   "version": "0.1.0",
   "description": "Logger utilities",
   "main": "index.js",
-  "repository": "https://github.com/element-gaming/logger-utils",
+  "repository": "git://github.com/element-gaming/logger-utils.git",
   "author": "Element Gaming <info@element-gaming.eu>",
   "contributors": [
     "Piero Nicolli <piero.nicolli@yahoo.it> (https://github.com/pnicolli)",
     "Andrea Tombolato <andreacw96@gmail.com> (https://github.com/andreacw5)"
   ],
   "license": "MIT",
-  "private": false,
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
