@@ -1,0 +1,42 @@
+{
+  "name": "logger-utils",
+  "version": "0.1.0",
+  "description": "Logger utilities",
+  "main": "index.js",
+  "repository": "https://github.com/element-gaming/logger-utils",
+  "author": "Element Gaming <info@element-gaming.eu>",
+  "contributors": [
+    "Piero Nicolli <piero.nicolli@yahoo.it> (https://github.com/pnicolli)",
+    "Andrea Tombolato <andreacw96@gmail.com> (https://github.com/andreacw5)"
+  ],
+  "license": "MIT",
+  "private": false,
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": [
+      "node",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "import/no-commonjs": 0,
+      "import/no-nodejs-modules": 0,
+      "prettier/prettier": [
+        "warn",
+        {
+          "singleQuote": true,
+          "trailingComma": "all"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  }
+}
