@@ -1,6 +1,6 @@
 {
   "name": "@element-gaming/logger-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Logger utilities",
   "main": "index.js",
   "repository": "git://github.com/element-gaming/logger-utils.git",
