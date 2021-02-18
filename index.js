@@ -1,3 +1,4 @@
-const logger = require('./utils/logger');
+const logger = require('./src/utils/logger');
+const morgan = require('./src/utils/morgan');
 
-module.exports = { logger };
+module.exports = { logger, morgan };
