@@ -1,41 +1,35 @@
 {
   "name": "@element-gaming/logger-utils",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Logger utilities",
   "main": "index.js",
-  "repository": "git://github.com/element-gaming/logger-utils.git",
   "author": "Element Gaming <info@element-gaming.eu>",
   "contributors": [
     "Piero Nicolli <piero.nicolli@yahoo.it> (https://github.com/pnicolli)",
     "Andrea Tombolato <andreacw96@gmail.com> (https://github.com/andreacw5)"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/element-gaming/logger-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/element-gaming/logger-utils/issues"
+  },
+  "homepage": "https://github.com/element-gaming/logger-utils#readme",
   "license": "MIT",
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "eslintConfig": {
-    "extends": [
-      "node",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "import/no-commonjs": 0,
-      "import/no-nodejs-modules": 0,
-      "prettier/prettier": [
-        "warn",
-        {
-          "singleQuote": true,
-          "trailingComma": "all"
-        }
-      ]
-    }
-  },
   "dependencies": {
     "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.0"
-  }
+    "winston-daily-rotate-file": "^4.5.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^2.0.5"
+  },
+  "private": true
 }
