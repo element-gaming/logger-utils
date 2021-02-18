@@ -1,19 +1,20 @@
 module.exports = {
-  extends: ['node', 'plugin:prettier/recommended'],
-  plugins: ['prettier'],
-  env: {
-    es6: true,
-    node: true,
-  },
+  extends: [
+    "node",
+    "plugin:prettier/recommended"
+  ],
+  plugins: [
+    "prettier"
+  ],
   rules: {
-    'import/no-commonjs': 0,
-    'import/no-nodejs-modules': 0,
-    'prettier/prettier': [
-      'warn',
+    "import/no-commonjs": 0,
+    "import/no-nodejs-modules": 0,
+    "prettier/prettier": [
+      "warn",
       {
-        singleQuote: true,
-        trailingComma: 'all',
-      },
-    ],
-  },
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ]
+  }
 };

@@ -1,6 +1,6 @@
 {
   "name": "@element-gaming/logger-utils",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Logger utilities",
   "main": "index.js",
   "author": "Element Gaming <info@element-gaming.eu>",
@@ -30,6 +30,5 @@
     "eslint": "^7.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "prettier": "^2.0.5"
-  },
-  "private": true
+  }
 }
