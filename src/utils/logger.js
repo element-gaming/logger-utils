@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 
 const { timestamp } = format;
-
+const LOG_FILE_NAME = process.env.LOG_FILE_NAME
 require('winston-daily-rotate-file');
 
 const enumerateErrorFormat = format((info) => {
@@ -21,7 +21,7 @@ const logFormat = format.printf(({ timestamp, level, message, ...metadata }) => 
 });
 
 const fileWriterTransport = new transports.DailyRotateFile({
-  filename: 'logs/element-api-%DATE%.log',
+  filename: `logs/${LOG_FILE_NAME}-%DATE%.log`,
   datePattern: 'YYYYMMDD',
   zippedArchive: true,
   maxSize: 5242880,
