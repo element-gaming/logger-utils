@@ -1,5 +1,5 @@
 # Logger utils
-<a href="https://codeclimate.com/github/element-gaming/logger-utils/maintainability"><img src="https://api.codeclimate.com/v1/badges/7e2767311baae450a014/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/7e2767311baae450a014/maintainability)](https://codeclimate.com/github/element-gaming/logger-utils/maintainability)
 
 Logger utils for the popular [Winston](https://github.com/winstonjs/winston) Node.js logging framework.
 
