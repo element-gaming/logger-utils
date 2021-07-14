@@ -1,5 +1,6 @@
 # Logger utils
 [![Maintainability](https://api.codeclimate.com/v1/badges/7e2767311baae450a014/maintainability)](https://codeclimate.com/github/element-gaming/logger-utils/maintainability)
+[![Known Vulnerabilities](https://snyk.io/test/github/element-gaming/logger-utils/badge.svg?targetFile=package.json)](https://snyk.io/test/github/element-gaming/logger-utils?targetFile=package.json)
 
 Logger utils for the popular [Winston](https://github.com/winstonjs/winston) Node.js logging framework.
 
