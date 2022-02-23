@@ -22,8 +22,8 @@
     "trailingComma": "all"
   },
   "dependencies": {
-    "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.5",
+    "winston": "^3.4.0",
+    "winston-daily-rotate-file": "^4.5.0",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
