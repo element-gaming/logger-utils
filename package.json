@@ -1,6 +1,6 @@
 {
   "name": "@element-gaming/logger-utils",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Logger utilities",
   "main": "index.js",
   "author": "Element Gaming <info@element-gaming.eu>",
@@ -22,8 +22,8 @@
     "trailingComma": "all"
   },
   "dependencies": {
-    "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.0",
+    "winston": "^3.5.1",
+    "winston-daily-rotate-file": "^4.6.0",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
