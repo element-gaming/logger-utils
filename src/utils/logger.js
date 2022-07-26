@@ -1,12 +1,8 @@
 const { createLogger, format, transports } = require('winston');
-const LokiTransport = require('winston-loki');
 
 const { timestamp } = format;
 const LOG_FILE_NAME = process.env.LOG_FILE_NAME
-const LOKI_HOST = process.env.LOKI_HOST
 require('winston-daily-rotate-file');
-
-const logger = createLogger()
 
 const enumerateErrorFormat = format((info) => {
   if (info instanceof Error) {
@@ -24,13 +20,7 @@ const logFormat = format.printf(({ timestamp, level, message, ...metadata }) => 
   return msg;
 });
 
-logger.add(new transports.Console({
-  level: process.env.NODE_ENV !== 'production' ? 'debug' : 'info',
-  format: format.combine(enumerateErrorFormat(), format.colorize(), timestamp(), format.splat(), logFormat),
-  exitOnError: false,
-}))
-
-logger.add(new transports.DailyRotateFile({
+const fileWriterTransport = new transports.DailyRotateFile({
   filename: `logs/${LOG_FILE_NAME}-%DATE%.log`,
   datePattern: 'YYYYMMDD',
   zippedArchive: true,
@@ -39,14 +29,25 @@ logger.add(new transports.DailyRotateFile({
   level: 'info',
   json: true,
   format: format.combine(enumerateErrorFormat(), format.uncolorize(), timestamp(), format.splat(), logFormat),
-}))
+});
 
-logger.add(new LokiTransport({
-  host: `${LOKI_HOST}`,
-  json: true,
-  level: 'info',
+const logger = createLogger({
+  level: process.env.NODE_ENV !== 'production' ? 'debug' : 'info',
   format: format.combine(enumerateErrorFormat(), format.colorize(), timestamp(), format.splat(), logFormat),
-  labels: { job: `${LOG_FILE_NAME}` }
-}))
+  transports: [
+    new transports.Console({
+      level: process.env.NODE_ENV !== 'production' ? 'debug' : 'info',
+    }),
+    fileWriterTransport,
+  ],
+  exitOnError: false,
+});
+
+fileWriterTransport.on('rotate', function (oldFilename, newFilename) {
+  logger.log('info', 'Log file rotation', {
+    oldFilename,
+    newFilename,
+  });
+});
 
 module.exports = logger;
