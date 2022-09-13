@@ -1150,10 +1150,10 @@ winston-daily-rotate-file@^4.6.0:
     triple-beam "^1.3.0"
     winston-transport "^4.4.0"
 
-winston-loki@^6.0.5:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/winston-loki/-/winston-loki-6.0.5.tgz#7a45ba7421baaa5c99c1d5e9949fed1f09d36523"
-  integrity sha512-LnsQntrt5UfURINJVJz/+Tvc0zJyMCibEHovn7IhHq5taO7dTz6JYto/AdYrxvoQlXHCHT9f1U5mm8ABW+5hYQ==
+winston-loki@^6.0.6:
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/winston-loki/-/winston-loki-6.0.6.tgz#18360a7c9068cb6edd8b25d4496489c6fce4571b"
+  integrity sha512-cll+nv5T/b9uJXqca0N2WKL1JJNuJND9E6WOOAuSGkZ44L9VQ/QK9F+/5VKbv6LIP9p0nvPSOYxtACCDb/9iWw==
   dependencies:
     async-exit-hook "2.0.1"
     btoa "^1.2.1"
