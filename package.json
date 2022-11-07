@@ -1,6 +1,6 @@
 {
   "name": "@element-gaming/logger-utils",
-  "version": "0.5.2",
+  "version": "0.7.0",
   "description": "Logger utilities",
   "main": "index.js",
   "author": "Element Gaming <info@element-gaming.eu>",
